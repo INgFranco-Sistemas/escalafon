@@ -12,7 +12,23 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('empleados', function (Blueprint $table) {
-            $table->string('regimen');
+            $table->string('nombres');
+            $table->string('apellidos');
+            $table->integer('dni');
+            $table->char('ruc');
+            $table->string('sexo');
+            $table->date('nacimiento');
+            $table->integer('fijo');
+            $table->integer('celular');
+            $table->string('nacionalidad');
+            $table->string('departamento');
+            $table->string('provincia');
+            $table->string('distrito');
+            $table->string('estadocivil');
+            $table->string('direccion');
+            $table->string('correo');
+	        $table->string('regimen');
+            $table->foreignId('oficina_id')->constrained()->onDelete('cascade');
         });
     }
 
@@ -22,7 +38,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('empleados', function (Blueprint $table) {
-            $table->dropColumn(['regimen']);
+            $table->dropForeign('empleados_oficina_id_foreign');
+            $table->dropColumn(['nombres','apellidos','dni','ruc','sexo','nacimiento','fijo','celular','nacionalidad','departamento','provincia','distrito','estadocivil','direccion','correo','regimen','oficina_id']);
         });
     }
 };
