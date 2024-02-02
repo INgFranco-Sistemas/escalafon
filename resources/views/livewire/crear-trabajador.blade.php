@@ -1,6 +1,6 @@
-<form class="md:w-1/2 space-y-5" wire:submit.prevent='crearTrabajador'>
+<form class="md:w-3/4 space-y-5" wire:submit.prevent='crearTrabajador'>
     <div class="flex gap-5">
-        <div class="md:w-1/2">
+        <div class="md:w-1/4">
             <x-input-label for="nombres" :value="__('Nombres')" />
 
             <x-text-input
@@ -17,7 +17,7 @@
             @enderror
         </div>
 
-        <div class="md:w-1/2">
+        <div class="md:w-1/4">
             <x-input-label for="apellidos" :value="__('Apellidos')" />
 
             <x-text-input
@@ -50,10 +50,8 @@
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
-    </div>
 
-    <div class="flex gap-5 mt-5">
-        <div class="md:w-1/3">
+        <div class="md:w-1/4">
             <x-input-label for="ruc" :value="__('RUC')" />
 
             <x-text-input
@@ -69,8 +67,10 @@
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
+    </div>
 
-        <div class="md:w-1/2">
+    <div class="flex gap-5 mt-5">
+        <div class="md:w-1/4">
             <x-input-label for="sexo" :value="__('Sexo')" />
 
             <select
@@ -89,7 +89,7 @@
             @enderror
         </div>
 
-        <div class="md:w-1/2">
+        <div class="md:w-1/4">
             <x-input-label for="nacimiento" :value="__('Fecha de Nacimiento')" />
 
             <x-text-input
@@ -105,10 +105,8 @@
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
-    </div>
 
-    <div class="flex gap-5 mt-5">
-        <div class="md:w-1/2">
+        <div class="md:w-1/4">
             <x-input-label for="fijo" :value="__('Teléfono Fijo')" />
 
             <x-text-input
@@ -125,7 +123,7 @@
             @enderror
         </div>
 
-        <div class="md:w-1/2">
+        <div class="md:w-1/4">
             <x-input-label for="celular" :value="__('Celular')" />
 
             <x-text-input
@@ -141,8 +139,10 @@
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
+    </div>
 
-        <div class="md:w-1/2">
+    <div class="flex gap-5 mt-5">
+        <div class="md:w-1/4">
             <x-input-label for="nacionalidad" :value="__('País')" />
 
             <select
@@ -391,10 +391,8 @@
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
-    </div>
 
-    <div class="flex gap-5 mt-5">
-        <div class="md:w-1/2">
+        <div class="md:w-1/4">
             <x-input-label for="departamento" :value="__('Departamento')" />
 
             <x-text-input
@@ -411,7 +409,7 @@
             @enderror
         </div>
 
-        <div class="md:w-1/2">
+        <div class="md:w-1/4">
             <x-input-label for="provincia" :value="__('Provincia')" />
 
             <x-text-input
@@ -428,7 +426,7 @@
             @enderror
         </div>
 
-        <div class="md:w-1/2">
+        <div class="md:w-1/4">
             <x-input-label for="distrito" :value="__('Distrito')" />
 
             <x-text-input
@@ -445,7 +443,6 @@
             @enderror
         </div>
     </div>
-
     {{-- <div class="flex gap-5 mt-5">
         <div class="md:w-1/2">
             <x-input-label for="departamento" :value="__('Departamento')" />
@@ -524,7 +521,7 @@
     {{-- </div> --}}
 
     <div class="flex gap-5 mt-5">
-        <div class="md:w-1/2">
+        <div class="md:w-1/4">
             <x-input-label for="estadocivil" :value="__('Estado Civil')" />
 
             <select
@@ -544,13 +541,83 @@
             @enderror
         </div>
 
-        <div class="md:w-full">
+        <div class="md:w-2/4">
+            <x-input-label for="correo" :value="__('Correo Personal')" />
+
+            <x-text-input
+                id="correo"
+                class="block mt-1 w-full"
+                type="text" name="correo"
+                wire:model="correo"
+                :value="old('correo')"
+                placeholder="Correo Personal"
+            />
+
+            @error('correo')
+                <livewire:mostrar-alerta :message="$message" />
+            @enderror
+        </div>
+
+        <div class="md:w-2/4">
+            <x-input-label for="correoi" :value="__('Correo Institucional')" />
+
+            <x-text-input
+                id="correoi"
+                class="block mt-1 w-full"
+                type="email" name="correo"
+                wire:model="correoi"
+                :value="old('correoi')"
+                placeholder="Correo Institucional"
+            />
+
+            @error('correoi')
+                <livewire:mostrar-alerta :message="$message" />
+            @enderror
+        </div>
+    </div>
+
+    <div class="flex gap-5 mt-5">
+        <div class="md:w-3/4">
+            <x-input-label for="cargoc" :value="__('Cargo Según Contrato')" />
+
+            <x-text-input
+                id="cargoc"
+                class="block mt-1 w-full"
+                type="text" name="cargoc"
+                wire:model="cargoc"
+                :value="old('cargoc')"
+                placeholder="Cargo según contrato"
+            />
+
+            @error('cargoc')
+                <livewire:mostrar-alerta :message="$message" />
+            @enderror
+        </div>
+
+        <div class="md:w-3/4">
+            <x-input-label for="cargoa" :value="__('Cargo Actual')" />
+
+            <x-text-input
+                id="cargoa"
+                class="block mt-1 w-full"
+                type="text" name="cargoa"
+                wire:model="cargoa"
+                :value="old('cargoa')"
+                placeholder="Cargo Actual"
+            />
+
+            @error('cargoa')
+                <livewire:mostrar-alerta :message="$message" />
+            @enderror
+        </div>
+
+        <div class="md:w-3/4">
             <x-input-label for="direccion" :value="__('Dirección')" />
 
             <x-text-input
                 id="direccion"
                 class="block mt-1 w-full"
-                type="text" name="direccion"
+                type="email" name="direccion"
                 wire:model="direccion"
                 :value="old('direccion')"
                 placeholder="Dirección"
@@ -563,23 +630,6 @@
     </div>
 
     <div class="flex gap-5 mt-5">
-        <div class="md:w-3/4">
-            <x-input-label for="correo" :value="__('Correo Electrónico')" />
-
-            <x-text-input
-                id="correo"
-                class="block mt-1 w-full"
-                type="text" name="correo"
-                wire:model="correo"
-                :value="old('correo')"
-                placeholder="Correo Electronico"
-            />
-
-            @error('correo')
-                <livewire:mostrar-alerta :message="$message" />
-            @enderror
-        </div>
-
         <div class="md:w-1/4">
             <x-input-label for="regimen" :value="__('Regimen')" />
 
@@ -605,10 +655,8 @@
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
-    </div>
 
-    <div class="flex gap-5 mt-5">
-        <div class="md:w-full">
+        <div class="md:w-3/4">
             <x-input-label for="oficina" :value="__('Oficina o Área')" />
 
             <select

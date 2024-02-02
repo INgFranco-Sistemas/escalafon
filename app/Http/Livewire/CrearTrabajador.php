@@ -41,7 +41,7 @@ class CrearTrabajador extends Component
         'distrito' => 'required',
         'estadocivil' => 'required',
         'direccion' => 'required',
-        'correo' => 'required',
+        'correo' => 'required|email',
         'regimen' => 'required',
         'oficina' => 'required'
     ];
