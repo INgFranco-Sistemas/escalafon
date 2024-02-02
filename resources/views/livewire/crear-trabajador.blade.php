@@ -589,9 +589,16 @@
                 class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full mt-1"
             >
                 <option value="">-- Seleccione --</option>
-                <option value="1057">1057</option>
-                <option value="728">728</option>
-                <option value="276">276</option>
+                <option value="CAS temporal">CAS temporal</option>
+                <option value="CAS suplencia">CAS suplencia</option>
+                <option value="CAS indeterminado">CAS indeterminado</option>
+                <option value="CAS medida cautelar">CAS medida cautelar</option>
+                <option value="CAS directivo">CAS directivo</option>
+                <option value="276 nombrado">276 nombrado</option>
+                <option value="276 suplencia">276 suplencia</option>
+                <option value="276 mandato judicial">276 mandato judicial</option>
+                <option value="276 designado">276 designado</option>
+                <option value="voto popular">voto popular</option>
             </select>
 
             @error('regimen')
