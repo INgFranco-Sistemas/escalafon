@@ -25,8 +25,11 @@ return new class extends Migration
             $table->string('provincia');
             $table->string('distrito');
             $table->string('estadocivil');
-            $table->string('direccion');
             $table->string('correo');
+            $table->string('correoinst');
+            $table->string('cargocontrato');
+            $table->string('cargoactual');
+            $table->string('direccion');
 	        $table->string('regimen');
             $table->foreignId('oficina_id')->constrained()->onDelete('cascade');
         });
@@ -39,7 +42,7 @@ return new class extends Migration
     {
         Schema::table('empleados', function (Blueprint $table) {
             $table->dropForeign('empleados_oficina_id_foreign');
-            $table->dropColumn(['nombres','apellidos','dni','ruc','sexo','nacimiento','fijo','celular','nacionalidad','departamento','provincia','distrito','estadocivil','direccion','correo','regimen','oficina_id']);
+            $table->dropColumn(['nombres','apellidos','dni','ruc','sexo','nacimiento','fijo','celular','nacionalidad','departamento','provincia','distrito','estadocivil','correo','correoinst','cargocontrato','cargoactual','direccion','regimen','oficina_id']);
         });
     }
 };

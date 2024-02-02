@@ -1,9 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
         <div>
-            <x-nav-link :href="route('trabajadores.create')">
+            {{-- <x-nav-link :href="route('trabajadores.create')">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">{{ __('+ Nuevo Personal') }}</h2>
-            </x-nav-link>
+            </x-nav-link> --}}
         </div>
     </x-slot>
 

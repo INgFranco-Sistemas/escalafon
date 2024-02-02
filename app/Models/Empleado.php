@@ -25,9 +25,11 @@ class Empleado extends Model
         'provincia',
         'distrito',
         'estadocivil',
-        'direccion',
-        'oficina',
         'correo',
+        'correoinst',
+        'cargocontrato',
+        'cargoactual',
+        'direccion',
         'regimen',
         'oficina_id'
     ];

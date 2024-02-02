@@ -21,8 +21,11 @@ class CrearTrabajador extends Component
     public $provincia;
     public $distrito;
     public $estadocivil;
-    public $direccion;
     public $correo;
+    public $correoinst;
+    public $cargocontrato;
+    public $cargoactual;
+    public $direccion;
     public $regimen;
     public $oficina;
 
@@ -40,8 +43,11 @@ class CrearTrabajador extends Component
         'provincia' => 'required',
         'distrito' => 'required',
         'estadocivil' => 'required',
-        'direccion' => 'required',
         'correo' => 'required|email',
+        'correoinst' => 'required|email',
+        'cargocontrato' => 'required',
+        'cargoactual' => 'required',
+        'direccion' => 'required',
         'regimen' => 'required',
         'oficina' => 'required'
     ];
@@ -64,14 +70,17 @@ class CrearTrabajador extends Component
             'provincia' => $datos['provincia'],
             'distrito' => $datos['distrito'],
             'estadocivil' => $datos['estadocivil'],
+            'correo' => $datos['correo'],
+            'correoinst' => $datos['correoinst'],
+            'cargocontrato' => $datos['cargocontrato'],
+            'cargoactual' => $datos['cargoactual'],
             'direccion' => $datos['direccion'],
-            'correo' =>$datos['correo'],
             'regimen' =>$datos['regimen'],
             'oficina_id' =>$datos['oficina'],
         ]);
 
         //CREAREMOS EL MENSAJE
-        session()->flash('mensaje', 'Fue Registrado el Personal');
+        session()->flash('mensaje', 'Fue Registrado Correctamente');
 
         //REDIRECCIONAMOS
         return redirect()->route('trabajadores.index');

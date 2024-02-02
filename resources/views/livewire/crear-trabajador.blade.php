@@ -547,7 +547,7 @@
             <x-text-input
                 id="correo"
                 class="block mt-1 w-full"
-                type="text" name="correo"
+                type="email" name="correo"
                 wire:model="correo"
                 :value="old('correo')"
                 placeholder="Correo Personal"
@@ -559,18 +559,18 @@
         </div>
 
         <div class="md:w-2/4">
-            <x-input-label for="correoi" :value="__('Correo Institucional')" />
+            <x-input-label for="correoinst" :value="__('Correo Institucional')" />
 
             <x-text-input
-                id="correoi"
+                id="correoinst"
                 class="block mt-1 w-full"
-                type="email" name="correo"
-                wire:model="correoi"
-                :value="old('correoi')"
+                type="email" name="correoinst"
+                wire:model="correoinst"
+                :value="old('correoinst')"
                 placeholder="Correo Institucional"
             />
 
-            @error('correoi')
+            @error('correoinst')
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
@@ -578,35 +578,35 @@
 
     <div class="flex gap-5 mt-5">
         <div class="md:w-3/4">
-            <x-input-label for="cargoc" :value="__('Cargo Según Contrato')" />
+            <x-input-label for="cargocontrato" :value="__('Cargo Según Contrato')" />
 
             <x-text-input
-                id="cargoc"
+                id="cargocontrato"
                 class="block mt-1 w-full"
-                type="text" name="cargoc"
-                wire:model="cargoc"
-                :value="old('cargoc')"
+                type="text" name="cargocontrato"
+                wire:model="cargocontrato"
+                :value="old('cargocontrato')"
                 placeholder="Cargo según contrato"
             />
 
-            @error('cargoc')
+            @error('cargocontrato')
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
 
         <div class="md:w-3/4">
-            <x-input-label for="cargoa" :value="__('Cargo Actual')" />
+            <x-input-label for="cargoactual" :value="__('Cargo Actual')" />
 
             <x-text-input
-                id="cargoa"
+                id="cargoactual"
                 class="block mt-1 w-full"
-                type="text" name="cargoa"
-                wire:model="cargoa"
-                :value="old('cargoa')"
+                type="text" name="cargoactual"
+                wire:model="cargoactual"
+                :value="old('cargoactual')"
                 placeholder="Cargo Actual"
             />
 
-            @error('cargoa')
+            @error('cargoactual')
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
@@ -617,7 +617,7 @@
             <x-text-input
                 id="direccion"
                 class="block mt-1 w-full"
-                type="email" name="direccion"
+                type="text" name="direccion"
                 wire:model="direccion"
                 :value="old('direccion')"
                 placeholder="Dirección"
