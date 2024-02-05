@@ -15,7 +15,7 @@
                 </div>
             @endif
 
-            {{-- <livewire:mostrar-personal /> --}}
+            <livewire:mostrar-personal />
         </div>
     </div>
 </x-app-layout>

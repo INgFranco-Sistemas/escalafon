@@ -521,6 +521,23 @@
     {{-- </div> --}}
 
     <div class="flex gap-5 mt-5">
+        <div class="md:w-2/4">
+            <x-input-label for="direccion" :value="__('Domicilio')" />
+
+            <x-text-input
+                id="direccion"
+                class="block mt-1 w-full"
+                type="text" name="direccion"
+                wire:model="direccion"
+                :value="old('direccion')"
+                placeholder="Domicilio"
+            />
+
+            @error('direccion')
+                <livewire:mostrar-alerta :message="$message" />
+            @enderror
+        </div>
+
         <div class="md:w-1/4">
             <x-input-label for="estadocivil" :value="__('Estado Civil')" />
 
@@ -557,7 +574,9 @@
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
+    </div>
 
+    <div class="flex gap-5 mt-5">
         <div class="md:w-2/4">
             <x-input-label for="correoinst" :value="__('Correo Institucional')" />
 
@@ -574,9 +593,7 @@
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
-    </div>
 
-    <div class="flex gap-5 mt-5">
         <div class="md:w-3/4">
             <x-input-label for="cargocontrato" :value="__('Cargo Según Contrato')" />
 
@@ -611,22 +628,7 @@
             @enderror
         </div>
 
-        <div class="md:w-3/4">
-            <x-input-label for="direccion" :value="__('Dirección')" />
 
-            <x-text-input
-                id="direccion"
-                class="block mt-1 w-full"
-                type="text" name="direccion"
-                wire:model="direccion"
-                :value="old('direccion')"
-                placeholder="Dirección"
-            />
-
-            @error('direccion')
-                <livewire:mostrar-alerta :message="$message" />
-            @enderror
-        </div>
     </div>
 
     <div class="flex gap-5 mt-5">
@@ -649,6 +651,7 @@
                 <option value="276 mandato judicial">276 mandato judicial</option>
                 <option value="276 designado">276 designado</option>
                 <option value="voto popular">voto popular</option>
+                <option value="Servicio Civil - SERVIR">Servicio Civil - SERVIR</option>
             </select>
 
             @error('regimen')
@@ -677,7 +680,7 @@
     </div>
 
     <x-primary-button class="w-full justify-center mt-5">
-        Registrar Nuevo Empleado
+        Registrarse
     </x-primary-button>
 </form>
 
