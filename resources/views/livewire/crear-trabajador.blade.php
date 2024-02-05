@@ -44,6 +44,7 @@
                 wire:model="dni"
                 :value="old('dni')"
                 placeholder="D.N.I."
+                maxlength="8"
             />
 
             @error('dni')
@@ -61,6 +62,7 @@
                 wire:model="ruc"
                 :value="old('ruc')"
                 placeholder="R.U.C."
+                maxlength="11"
             />
 
             @error('ruc')
@@ -116,6 +118,7 @@
                 wire:model="fijo"
                 :value="old('fijo')"
                 placeholder=" Teléfono Fijo"
+                maxlength="9"
             />
 
             @error('fijo')
@@ -133,6 +136,7 @@
                 wire:model="celular"
                 :value="old('celular')"
                 placeholder="Celular"
+                maxlength="9"
             />
 
             @error('celular')
