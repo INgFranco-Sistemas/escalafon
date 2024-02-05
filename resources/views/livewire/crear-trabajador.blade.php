@@ -109,24 +109,6 @@
         </div>
 
         <div class="md:w-1/4">
-            <x-input-label for="fijo" :value="__('Teléfono Fijo')" />
-
-            <x-text-input
-                id="fijo"
-                class="block mt-1 w-full"
-                type="text" name="fijo"
-                wire:model="fijo"
-                :value="old('fijo')"
-                placeholder=" Teléfono Fijo"
-                maxlength="9"
-            />
-
-            @error('fijo')
-                <livewire:mostrar-alerta :message="$message" />
-            @enderror
-        </div>
-
-        <div class="md:w-1/4">
             <x-input-label for="celular" :value="__('Celular')" />
 
             <x-text-input
@@ -143,6 +125,26 @@
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>
+
+        <div class="md:w-1/4">
+            <x-input-label for="estadocivil" :value="__('Estado Civil')" />
+
+            <select
+                id="estadocivil"
+                wire:model="estadocivil"
+                class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full mt-1"
+            >
+                <option value="">-- Seleccione --</option>
+                <option value="casado(a)">CASADO(A)</option>
+                <option value="divorsiado(a)">DIVORSIADO(A)</option>
+                <option value="soltero(a)">SOLTERO(A)</option>
+                <option value="viudo(a)">VIUDIO(A)</option>
+            </select>
+
+            @error('estadocivil')
+                <livewire:mostrar-alerta :message="$message" />
+            @enderror
+        </div>
     </div>
 
     <div class="flex gap-5 mt-5">
@@ -155,7 +157,7 @@
                 wire:model="nacionalidad"
                 class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full mt-1"
             >
-                <option value="PE">Perú</option>
+                <option value="0">-- Seleccionar --</option>
                 <option value="AL">Albania</option>
                 <option value="DE">Alemania</option>
                 <option value="AD">Andorra</option>
@@ -538,26 +540,6 @@
             />
 
             @error('direccion')
-                <livewire:mostrar-alerta :message="$message" />
-            @enderror
-        </div>
-
-        <div class="md:w-1/4">
-            <x-input-label for="estadocivil" :value="__('Estado Civil')" />
-
-            <select
-                id="estadocivil"
-                wire:model="estadocivil"
-                class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full mt-1"
-            >
-                <option value="">-- Seleccione --</option>
-                <option value="casado(a)">CASADO(A)</option>
-                <option value="divorsiado(a)">DIVORSIADO(A)</option>
-                <option value="soltero(a)">SOLTERO(A)</option>
-                <option value="viudo(a)">VIUDIO(A)</option>
-            </select>
-
-            @error('estadocivil')
                 <livewire:mostrar-alerta :message="$message" />
             @enderror
         </div>

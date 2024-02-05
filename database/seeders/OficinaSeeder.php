@@ -34,7 +34,7 @@ class OficinaSeeder extends Seeder
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Oficina Regional de Control Institucional',
+            'oficina' => 'Organo de Control Institucional',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -46,7 +46,7 @@ class OficinaSeeder extends Seeder
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Secretaria General',
+            'oficina' => 'Oficina de Atención al Ciudadano y Gestión Documental',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -70,37 +70,37 @@ class OficinaSeeder extends Seeder
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Oficina de Gestión de Recursos Humanos',
+            'oficina' => 'Sub Gerencia de Gestión de Recursos Humanos',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Oficina de Abastecimiento',
+            'oficina' => 'Sub Gerencia de Abastecimiento',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Oficina de Contabilidad',
+            'oficina' => 'Sub Gerencia de Contabilidad',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Oficina de Tesoreria',
+            'oficina' => 'Sub Gerencia de Tesoreria',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Oficina de Patrimonio',
+            'oficina' => 'Sub Gerencia de Patrimonio',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Oficina Regional de Comunicaciones, Imagen y Protocolo',
+            'oficina' => 'Oficina de Comunicaciones, Imagen y Protocolo',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -136,13 +136,13 @@ class OficinaSeeder extends Seeder
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Sub Gerencia de Estudios de Pre Inversiones',
+            'oficina' => 'Sub Gerencia de Formulación y Evaluación de Estudios de Pre Inversion',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Sub Gerencia de Cooperación Internacional',
+            'oficina' => 'Oficina Regional de Cooperación Internacional',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -160,13 +160,13 @@ class OficinaSeeder extends Seeder
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Oficina Regional de Gestión en Conflictos Sociales',
+            'oficina' => 'Oficina Regional de Gestión en Conflictos y de Dialogo',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Oficina Regional de Gestión de Riesgo de Desastres, Defensa Nacional y Seguridad Ciudadana',
+            'oficina' => 'Oficina Regional de Gestión de Riesgos, Defensa Nacional y Seguridad Ciudadana',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -208,13 +208,13 @@ class OficinaSeeder extends Seeder
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Sub Gerencia de Inversión y Bienestar Social',
+            'oficina' => 'Sub Gerencia de Inclusión Social e Identidad Cultural',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('oficinas')->insert([
-            'oficina' => 'Sub Gerencia de Comunidades Nativas, Campecinas, Identidad Cultural y Poblaciones Vulnerables',
+            'oficina' => 'Sub Gerencia de Desarrollo Poblacional',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);

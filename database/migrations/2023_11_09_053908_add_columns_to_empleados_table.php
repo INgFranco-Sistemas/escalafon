@@ -18,7 +18,6 @@ return new class extends Migration
             $table->char('ruc');
             $table->string('sexo');
             $table->date('nacimiento');
-            $table->integer('fijo');
             $table->integer('celular');
             $table->string('nacionalidad');
             $table->string('departamento');
@@ -42,7 +41,7 @@ return new class extends Migration
     {
         Schema::table('empleados', function (Blueprint $table) {
             $table->dropForeign('empleados_oficina_id_foreign');
-            $table->dropColumn(['nombres','apellidos','dni','ruc','sexo','nacimiento','fijo','celular','nacionalidad','departamento','provincia','distrito','estadocivil','correo','correoinst','cargocontrato','cargoactual','direccion','regimen','oficina_id']);
+            $table->dropColumn(['nombres','apellidos','dni','ruc','sexo','nacimiento','celular','nacionalidad','departamento','provincia','distrito','estadocivil','correo','correoinst','cargocontrato','cargoactual','direccion','regimen','oficina_id']);
         });
     }
 };
