@@ -147,7 +147,7 @@
 
     <div class="flex gap-5 mt-5">
         <div class="md:w-1/4">
-            <x-input-label for="nacionalidad" :value="__('País')" />
+            <x-input-label for="nacionalidad" :value="__('Pais de Nacimiento')" />
 
             <select
                 id="nacionalidad"
@@ -155,7 +155,7 @@
                 wire:model="nacionalidad"
                 class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full mt-1"
             >
-                <option value="AF">Afganistán</option>
+                <option value="PE">Perú</option>
                 <option value="AL">Albania</option>
                 <option value="DE">Alemania</option>
                 <option value="AD">Andorra</option>
