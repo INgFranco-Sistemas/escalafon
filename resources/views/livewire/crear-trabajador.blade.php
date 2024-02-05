@@ -527,7 +527,7 @@
     {{-- </div> --}}
 
     <div class="flex gap-5 mt-5">
-        <div class="md:w-2/4">
+        <div class="md:w-3/4">
             <x-input-label for="direccion" :value="__('Domicilio')" />
 
             <x-text-input
@@ -545,6 +545,23 @@
         </div>
 
         <div class="md:w-2/4">
+            <x-input-label for="fechavinculo" :value="__('Fecha de Vinculo')" />
+
+            <x-text-input
+                id="fechavinculo"
+                class="block mt-1 w-full"
+                type="date" name="fechavinculo"
+                wire:model="fechavinculo"
+                :value="old('fechavinculo')"
+                placeholder="Vinculo"
+            />
+
+            @error('fechavinculo')
+                <livewire:mostrar-alerta :message="$message" />
+            @enderror
+        </div>
+
+        <div class="md:w-3/4">
             <x-input-label for="correo" :value="__('Correo Personal')" />
 
             <x-text-input

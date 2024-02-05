@@ -14,6 +14,7 @@ class CrearTrabajador extends Component
     public $ruc;
     public $sexo;
     public $nacimiento;
+    public $fechavinculo;
     public $celular;
     public $nacionalidad;
     public $departamento;
@@ -37,6 +38,7 @@ class CrearTrabajador extends Component
         'nacimiento' => 'required|date',
         'celular' => 'required|min:9',
         'nacionalidad' => 'required',
+        'fechavinculo' => 'required',
         'departamento' => 'required',
         'provincia' => 'required',
         'distrito' => 'required',
@@ -61,6 +63,7 @@ class CrearTrabajador extends Component
             'ruc' => $datos['ruc'],
             'sexo' => $datos['sexo'],
             'nacimiento' => $datos['nacimiento'],
+            'vinculo' => $datos['fechavinculo'],
             'celular' => $datos['celular'],
             'nacionalidad' => $datos['nacionalidad'],
             'departamento' => $datos['departamento'],

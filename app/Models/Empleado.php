@@ -18,6 +18,7 @@ class Empleado extends Model
         'ruc',
         'sexo',
         'nacimiento',
+        'vinculo',
         'celular',
         'nacionalidad',
         'departamento',
