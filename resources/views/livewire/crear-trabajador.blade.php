@@ -59,15 +59,10 @@
                 id="ruc"
                 class="block mt-1 w-full"
                 type="text" name="ruc"
-                wire:model="ruc"
                 :value="old('ruc')"
                 placeholder="R.U.C."
                 maxlength="11"
             />
-
-            @error('ruc')
-                <livewire:mostrar-alerta :message="$message" />
-            @enderror
         </div>
     </div>
 
@@ -587,14 +582,9 @@
                 id="correoinst"
                 class="block mt-1 w-full"
                 type="email" name="correoinst"
-                wire:model="correoinst"
                 :value="old('correoinst')"
                 placeholder="Correo Institucional"
             />
-
-            @error('correoinst')
-                <livewire:mostrar-alerta :message="$message" />
-            @enderror
         </div>
 
         <div class="md:w-3/4">
