@@ -59,6 +59,7 @@
                 id="ruc"
                 class="block mt-1 w-full"
                 type="text" name="ruc"
+                wire:model="ruc"
                 :value="old('ruc')"
                 placeholder="R.U.C."
                 maxlength="11"
@@ -582,6 +583,7 @@
                 id="correoinst"
                 class="block mt-1 w-full"
                 type="email" name="correoinst"
+                wire:model="correoinst"
                 :value="old('correoinst')"
                 placeholder="Correo Institucional"
             />
