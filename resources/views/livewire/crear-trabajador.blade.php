@@ -134,7 +134,7 @@
                 <option value="casado(a)">CASADO(A)</option>
                 <option value="divorsiado(a)">DIVORSIADO(A)</option>
                 <option value="soltero(a)">SOLTERO(A)</option>
-                <option value="viudo(a)">VIUDIO(A)</option>
+                <option value="viudo(a)">VIUDO(A)</option>
             </select>
 
             @error('estadocivil')
