@@ -647,6 +647,7 @@
                 <option value="276 designado">276 designado</option>
                 <option value="voto popular">voto popular</option>
                 <option value="Servicio Civil - SERVIR">Servicio Civil - SERVIR</option>
+                <option value="Practicante">Practicante</option>
             </select>
 
             @error('regimen')
