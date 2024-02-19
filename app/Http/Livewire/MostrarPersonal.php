@@ -35,7 +35,7 @@ class MostrarPersonal extends Component
         ->when($this->regimen, function($query){
             $query->where('regimen', $this->regimen);
         })
-        ->orderBy('id','DESC')->paginate(10);
+        ->orderBy('id','DESC')->paginate(50);
 
         return view('livewire.mostrar-personal', [
             'empleados' => $empleados
