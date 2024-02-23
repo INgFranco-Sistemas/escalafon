@@ -19,8 +19,8 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/', [App\Http\Controllers\TrabajadoreController::class, 'index'])->name('trabajadores.index');
-Route::get('/trabajadores/create', [App\Http\Controllers\TrabajadoreController::class, 'create'])->name('trabajadores.create');
+Route::get('/', [App\Http\Controllers\TrabajadoreController::class, 'index'])->middleware(['auth', 'verified'])->name('trabajadores.index');
+Route::get('/trabajadores/create', [App\Http\Controllers\TrabajadoreController::class, 'create'])->middleware(['auth', 'verified'])->name('trabajadores.create');
 Route::get('/trabajadores/{trabajadore}/edit', [App\Http\Controllers\TrabajadoreController::class, 'edit'])->middleware(['auth', 'verified'])->name('trabajadores.edit');
 Route::get('/trabajadores/{trabajadore}', [App\Http\Controllers\TrabajadoreController::class, 'show'])->middleware(['auth', 'verified'])->name('trabajadores.show');
 
